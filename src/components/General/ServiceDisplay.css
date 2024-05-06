@@ -1,0 +1,20 @@
+.service-div {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    background: linear-gradient(0deg, #F5F7F6, #5CA0F2);
+    cursor: pointer;
+    opacity: 1;
+    flex: 1;
+    /* Each service div takes up 30% of the container */
+    margin: 0 1.5%;
+    margin-bottom: 10%; 
+    /* Adjust margin to create spacing between items */
+    /* Just for visualization */
+    padding: 20px;
+    /* Adjust padding as needed */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+
+}

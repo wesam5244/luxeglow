@@ -1,0 +1,1 @@
+export const BACKGROUND_GREY = '#4D5458'; 

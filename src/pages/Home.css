@@ -1,0 +1,16 @@
+.home-container{
+    background-color: #4D5458;
+    display: flex; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.services-display {
+    margin-top: 2%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
