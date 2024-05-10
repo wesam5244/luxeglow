@@ -4,13 +4,14 @@
     min-height: 100vh; 
     display: flex; 
     flex-direction: column;
+    color: white; 
 }
 
 .services-display {
-    margin-top: 2%; 
+    width: 100%; 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch; /* Ensures all items stretch to the same height */
     justify-content: center;
     flex-wrap: wrap; 
 }

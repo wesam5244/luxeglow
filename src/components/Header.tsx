@@ -57,8 +57,8 @@ const Header: React.FC<HeaderProps> = (props) => {
                     <ul className='web-nav-menu-list'>
                         <li><Link className={props.activePage == "home" ? "active" : ""} to='/'>Home</Link></li>
                         <li><Link className={props.activePage == "about_us" ? "active" : ""} to='/'>About Us</Link></li>
-                        <li><Link className={props.activePage == "services" ? "active" : ""} to='/'>Services</Link></li>
-                        <li><Link className={props.activePage == "contact_us" ? "active" : ""} to='/'>Contact Us</Link></li>
+                        <li><Link className={props.activePage == "services" ? "active" : ""} to='/services'>Services</Link></li>
+                        <li><Link className={props.activePage == "contact_us" ? "active" : ""} to='/contact'>Contact Us</Link></li>
                     </ul>
                 </nav>
             </>

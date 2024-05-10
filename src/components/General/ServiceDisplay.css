@@ -6,7 +6,7 @@
     flex: 1;
     /* Each service div takes up 30% of the container */
     margin: 0 1.5%;
-    margin-bottom: 10%; 
+    margin-bottom: 5%; 
     /* Adjust margin to create spacing between items */
     /* Just for visualization */
     padding: 20px;
@@ -17,4 +17,85 @@
     text-align: center;
     position: relative;
 
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #9ecded;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-div:hover .service-overlay {
+    transition: .5s;
+    opacity: 0.9;
+}
+
+.service-icon{
+    font-size: 2em;
+
+}
+
+.service-icon:hover{
+    opacity: 0.5; 
+    transition: 0.5s;
+}
+
+.top-price {
+    font-size: 2em;
+    font-family: "Arial Black", sans-serif;
+    margin: 0;
+    color: #4D5458
+}
+
+.list-price {
+    margin: 0;
+    margin-top: 2%;
+    font-family: "Arial Black", sans-serif;
+    font-size: 1.7em;
+    color: #4D5458
+}
+
+.services-included {
+    margin-bottom: 5%;
+}
+
+.service-included {
+    font-family: 'Gruppo', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 1%;
+    color: #4D5458
+}
+
+.service:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+.service-name {
+    color: #4D5458;
+    font-family: 'Homenaje', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2em;
+}
+
+.prices {
+    margin-bottom: 5%;
+}
+
+.addons{
+    color: #4d5458;
+    font-family: Arial Black, sans-serif;
+    margin: 0;
+    margin-top: 5%; 
 }
