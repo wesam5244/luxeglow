@@ -63,11 +63,11 @@ const Contact: React.FC = () => {
                 </div>
                 <div className='contact-info-container'>
                     <div className='contact-info'>
-                        <h2 style={{fontSize: '1.8em'}}>
+                        <h2 style={{ fontSize: '1.8em' }}>
                             CONTACT
                         </h2>
                         <div className='contact-info-row'>
-                            <FontAwesomeIcon icon={faPhone} style={{fontSize: '1.5em'}}/>
+                            <FontAwesomeIcon icon={faPhone} style={{ fontSize: '1.5em' }} />
                             <div className='contact-info-row-col'>
                                 <h3>
                                     Phone
@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
                             </div>
                         </div>
                         <div className='contact-info-row'>
-                            <FontAwesomeIcon icon={faEnvelope} style={{fontSize: '1.5em'}}/>
+                            <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '1.5em' }} />
                             <div className='contact-info-row-col'>
                                 <h3>
                                     Email
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                             </div>
                         </div>
                         <div className='contact-info-row'>
-                            <FontAwesomeIcon icon={faClock} style={{fontSize: '1.5em'}}/>
+                            <FontAwesomeIcon icon={faClock} style={{ fontSize: '1.5em' }} />
                             <div className='contact-info-row-col'>
                                 <h3>
                                     Hours
@@ -103,13 +103,20 @@ const Contact: React.FC = () => {
                                 <p>
                                     Sat & Sun: 9am - 6pm
                                 </p>
-                                <p style={{marginTop: '2%'}}>
+                                <p style={{ marginTop: '2%' }}>
                                     *Hours can vary by season, please call ahead for availability.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <div className='location-container'>
+                <h2 style={{ fontSize: '1.8em' }}>
+                    LOCATION
+                </h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.779145430004!2d-83.04638702508099!3d42.304577738606845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d005ff996f5%3A0x3d3c44730772afe3!2sLuxeGlow%20Auto%20Spa!5e0!3m2!1sen!2sca!4v1711861763548!5m2!1sen!2sca" style={{ border: '0', width: '100%', height: '40vh', margin: '0 auto' }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
             <Footer screenWidth={screenWidth} />

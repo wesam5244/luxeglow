@@ -2,22 +2,23 @@ import React from 'react';
 import { Service } from './../../helpers/ServicesHelper';
 import './ServiceDisplay.css';
 interface ServiceDisplayProps {
-    screenWidth: number; 
+    screenWidth: number;
     service: Service;
 }
 
 const ServiceDisplay: React.FC<ServiceDisplayProps> = (props) => {
-    const imagePath = "/images/" + props.service.image; 
+    const imagePath = "/images/" + props.service.image;
     return (
-        <div className="service-div" style = {{
-            maxWidth: props.screenWidth > 700 ? '30%' : '75%',
-            minWidth: props.screenWidth > 700 ? '30%' : '75%',
-            marginBottom: props.screenWidth > 700 ? '0': '5%'
+        <div className="service-div" style={{
+            maxWidth: props.screenWidth > 700 ? '30%' : '90%',
+            minWidth: props.screenWidth > 700 ? '30%' : '90%',
+            marginBottom: props.screenWidth > 700 ? '0' : '5%'
         }}>
             <h2 className='service-name'>
                 {props.service.name}
             </h2>
-            <img src={imagePath} style={{width: '100%', height: '35%'}}/>
+            
+            <img src={imagePath} style={{ width: '100%', height: props.screenWidth > 700 ? '30vh' : '25vh' }} />
             <div className='prices'>
                 {props.service.prices.map((price, index) => {
                     return (
@@ -43,6 +44,7 @@ const ServiceDisplay: React.FC<ServiceDisplayProps> = (props) => {
                         <p className='service-included'>
                             {addon.service} for ${addon.price}
                         </p>
+                        
                     )
                 })}
             </div>
