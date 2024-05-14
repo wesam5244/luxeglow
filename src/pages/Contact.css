@@ -1,0 +1,73 @@
+.contact-container{
+    background-color: #4D5458;
+    display: flex; 
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column;
+    color: white; 
+}
+
+.contact-header{
+    text-align: center;
+    font-family: 'Homenaje', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto; 
+    margin-top: 5%; 
+    font-size: 4.5vw;
+    text-align: center; 
+}
+
+.contact-header-pic{
+    max-width: 100%;
+    opacity: 0.5;
+}
+
+.form-container{
+    width: 60%;
+}
+
+.contact-info-container{
+    width: 40%;
+    display: flex; 
+}
+
+.contact-info{
+    width: 75%; 
+    margin: 0 auto; 
+    background-color: #9ecded;
+    padding: 5%; 
+    font-family: 'Homenaje', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex; 
+    flex-direction: column;
+}
+
+.contact-info-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5%; 
+}
+
+.contact-info-row-col{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%; 
+}
+
+.contact-info-row-col h3{
+    margin: 0; 
+    font-family: 'Homenaje', sans-serif;
+    font-size: 1.5em;
+}
+
+.contact-info-row-col p{
+    margin: 0; 
+    font-family: 'Gruppo', sans-serif;
+    font-size: 1.2em;
+}
+
+
+

@@ -1,6 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import header_background from './../images/contact_pic.jpg';
+import React, { useState, useEffect } from 'react';
+import header_background from './../images/contact_pic.jpg'
 import Header from '../components/Header';
+import './Contact.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faLocationDot, faClock } from "@fortawesome/free-solid-svg-icons";
+import Footer from '../components/General/Footer';
 
 const Contact: React.FC = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -20,17 +24,17 @@ const Contact: React.FC = () => {
         };
     }, []); // Empty dependency array ensures this effect runs only once on component mount
     return (
-        <div className='services-container'>
+        <div className='contact-container'>
             {screenWidth > 700 ?
                 (
                     <>
                         <div className='content-above-image'>
-                            <Header activePage="services" screenWidth={screenWidth} />
+                            <Header activePage="contact_us" screenWidth={screenWidth} />
                             <h1 className="services-header">
-                                Our Services
+                                Contact Us
                             </h1>
                         </div>
-                        <img src={header_background} className={"services-header-pic"} />
+                        <img src={header_background} className={"contact-header-pic"} />
                     </>
                 )
                 :
@@ -53,6 +57,62 @@ const Contact: React.FC = () => {
                 )
 
             }
+            <div style={{ display: 'flex', flexDirection: 'row', marginTop: '2%' }}>
+                <div className='form-container'>
+                    Hello
+                </div>
+                <div className='contact-info-container'>
+                    <div className='contact-info'>
+                        <h2 style={{fontSize: '1.8em'}}>
+                            CONTACT
+                        </h2>
+                        <div className='contact-info-row'>
+                            <FontAwesomeIcon icon={faPhone} style={{fontSize: '1.5em'}}/>
+                            <div className='contact-info-row-col'>
+                                <h3>
+                                    Phone
+                                </h3>
+                                <p>
+                                    (519) 816-7258
+                                </p>
+                            </div>
+                        </div>
+                        <div className='contact-info-row'>
+                            <FontAwesomeIcon icon={faEnvelope} style={{fontSize: '1.5em'}}/>
+                            <div className='contact-info-row-col'>
+                                <h3>
+                                    Email
+                                </h3>
+                                <p>
+                                    luxeglowautospa@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                        <div className='contact-info-row'>
+                            <FontAwesomeIcon icon={faClock} style={{fontSize: '1.5em'}}/>
+                            <div className='contact-info-row-col'>
+                                <h3>
+                                    Hours
+                                </h3>
+                                <p>
+                                    Mon - Thur: 9am - 6pm
+                                </p>
+                                <p>
+                                    Fri: Closed
+                                </p>
+                                <p>
+                                    Sat & Sun: 9am - 6pm
+                                </p>
+                                <p style={{marginTop: '2%'}}>
+                                    *Hours can vary by season, please call ahead for availability.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <Footer screenWidth={screenWidth} />
         </div>
     )
 }
