@@ -12,7 +12,7 @@ const HomeTop: React.FC<HomeTopProps> = (props) => {
         return (
             <>
                 <div className='content-above-image'>
-                    <Header screenWidth={props.screenWidth} activePage='home' />
+                    <Header screenWidth={props.screenWidth} />
                     <h1 className="home-text">
                         Ignite Brilliance, Embrace Elegance - LuxeGlow Auto Spa,  Transforming Rides, One Detail at a Time
                     </h1>
@@ -24,7 +24,7 @@ const HomeTop: React.FC<HomeTopProps> = (props) => {
     else {
         return (
             <>
-                <Header screenWidth={props.screenWidth} activePage='home' />
+                <Header screenWidth={props.screenWidth} />
                 <div className='mobile-image-container'>
                     <img src={escalade} className='escalade-pic-mobile' />
                     <div className="overlay-text">

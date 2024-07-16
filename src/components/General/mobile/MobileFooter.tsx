@@ -46,7 +46,7 @@ function MobileFooter() {
             <div style={{ display: 'inline-flex', alignItems: 'center', margin: '0', marginLeft: '10%' }}>
                 <FontAwesomeIcon icon={faEnvelope} className='right-col-icon' />
                 <p style={{ marginLeft: '5%' }}>
-                    luxeglowautospace@gmail.com
+                    luxeglowautospa@gmail.com
                 </p>
             </div>
             <div style={{ display: 'inline-flex', alignItems: 'center', margin: '0', marginBottom: '0', marginLeft: '10%' }}>

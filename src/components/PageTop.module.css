@@ -1,0 +1,75 @@
+.content_above_image{
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    display: flex; 
+    flex-direction: column;
+    width: 100%; 
+}
+
+.header_text{
+    width: 40%; 
+    color: white; 
+    font-family: 'Homenaje', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto; 
+    margin-top: 30px;
+    font-size: 4.5vw;
+    text-align: center; 
+}
+
+.escalade_pic_web{
+    max-width: 100%;
+    min-width: 100%; 
+    opacity: 0.6; 
+}
+
+.services_header_pic{
+    max-width: 100%;
+    opacity: 0.5;
+}
+
+.mobile_home_image_container {
+    position: relative;
+    max-width: 100vw;
+    overflow: hidden;
+    height: 50vh;
+    text-align: center;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /* Change position to relative */
+    /* Position the image absolutely */
+}
+
+.overlay_text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Set text color */
+    font-size: 24px; /* Adjust font size */
+    text-align: center; /* Center text horizontally */
+    z-index: 1; /* Ensure text appears above the image */
+}
+
+.car_text {
+    font-family: 'Homenaje', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 7vw;
+}
+
+.escalade_pic_mobile{
+    max-width: 200%;
+    min-width: 200%; 
+    opacity: 0.6; 
+}
+
+

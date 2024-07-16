@@ -5,7 +5,6 @@ import header_background from './../images/services_page.jpg'
 import Header from '../components/Header';
 import ServiceDisplay from '../components/General/ServiceDisplay';
 import { getServices } from './../helpers/ServicesHelper'
-import Footer from '../components/General/Footer';
 
 const Services: React.FC = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -29,22 +28,10 @@ const Services: React.FC = () => {
 
     return (
         <div className='services-container'>
-            {screenWidth > 700 ?
-                (
+            {screenWidth <= 700 && (
+                
                     <>
-                        <div className='content-above-image'>
-                            <Header activePage="services" screenWidth={screenWidth} />
-                            <h1 className="services-header">
-                                Our Services
-                            </h1>
-                        </div>
-                        <img src={header_background} className={"services-header-pic"} />
-                    </>
-                )
-                :
-                (
-                    <>
-                        <Header activePage="services" screenWidth={screenWidth} />
+                        <Header screenWidth={screenWidth} />
                         <div style={{
                             position: 'relative'
                         }}>
@@ -86,7 +73,6 @@ const Services: React.FC = () => {
             <div className="services-contact">
                 Contact Us
             </div>
-            <Footer screenWidth={screenWidth} />
         </div>
     )
 }

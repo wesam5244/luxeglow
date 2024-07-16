@@ -8,6 +8,8 @@ import ServiceDisplay from '../components/General/ServiceDisplay';
 import Footer from '../components/General/Footer';
 import { getServices } from './../helpers/ServicesHelper'
 
+
+
 const Home: React.FC = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -27,9 +29,9 @@ const Home: React.FC = () => {
     }, []); // Empty dependency array ensures this effect runs only once on component mount
 
     const services = getServices();
+    
     return (
-        <div className='home-container'>
-            <HomeTop screenWidth={screenWidth} />
+        <>
             <AboutUs screenWidth={screenWidth} />
             <h1 style = {{
                 textAlign: 'center',
@@ -45,8 +47,7 @@ const Home: React.FC = () => {
                     )
                 })}
             </div>
-            <Footer screenWidth={screenWidth}/>
-        </div>
+        </>
     )
 }
 

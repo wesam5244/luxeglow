@@ -28,22 +28,10 @@ const Contact: React.FC = () => {
     }, []); // Empty dependency array ensures this effect runs only once on component mount
     return (
         <div className='contact-container'>
-            {screenWidth > 700 ?
+            {screenWidth <= 700 &&
                 (
                     <>
-                        <div className='content-above-image'>
-                            <Header activePage="contact_us" screenWidth={screenWidth} />
-                            <h1 className="services-header">
-                                Contact Us
-                            </h1>
-                        </div>
-                        <img src={header_background} className={"contact-header-pic"} />
-                    </>
-                )
-                :
-                (
-                    <>
-                        <Header activePage="services" screenWidth={screenWidth} />
+                        <Header screenWidth={screenWidth} />
                         <div style={{
                             position: 'relative'
                         }}>
@@ -177,7 +165,6 @@ const Contact: React.FC = () => {
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.779145430004!2d-83.04638702508099!3d42.304577738606845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d005ff996f5%3A0x3d3c44730772afe3!2sLuxeGlow%20Auto%20Spa!5e0!3m2!1sen!2sca!4v1711861763548!5m2!1sen!2sca" style={{ border: '0', width: '100%', height: '40vh', margin: '0 auto' }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
-            <Footer screenWidth={screenWidth} />
         </div>
     )
 }

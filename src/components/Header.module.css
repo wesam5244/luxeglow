@@ -1,0 +1,144 @@
+/* Header.module.css */
+.center_link {
+    display: inline-block;
+    text-decoration: none;
+     
+    text-align: center;
+}
+
+.logo {
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.mobile_top_bar {
+    width: 100%; 
+    background-color: #4D5458;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.call_icon {
+    color: white; 
+    vertical-align: center;
+    margin-left: 5%; 
+    font-size: 1.2em;
+}
+
+.mobile_logo {
+    max-width: 75%;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+.menu_top {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_open {
+    overflow: hidden;
+}
+
+.hamburger {
+    color: white; 
+    vertical-align: center;
+    margin-right: 5%; 
+    font-size: 1.2em;
+}
+
+.hamburger_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    border: 0; 
+    padding: 10px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    height: 100vh; 
+    background-color: #5e7b8e;
+}
+
+.hamburger_menu.open {
+    transform: translateX(0);
+}
+
+.hamburger_menu_items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger_menu_items a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: left;
+    color: white; 
+    font-family: 'Gruppo', sans-serif;
+    font-size: 6.5vw;
+    margin-left: 10px; 
+    font-weight: 500;
+}
+
+.hamburger_menu_items a:hover {
+    background-color: transparent;
+}
+
+.hamburger_call {
+    margin-top: 10%; 
+    background-color: transparent;
+    border: 2px solid #9ecded; 
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.hamburger_book {
+    margin-top: 10%; 
+    background-color: #9ecded;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.web_nav_items {
+    width: 30%; 
+    margin: 0 auto; 
+}
+
+.web_nav_menu_list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%; 
+}
+
+.web_nav_menu_list li a {
+    color: white; 
+    cursor: pointer;
+    font-family: 'Gruppo', sans-serif;
+    font-size: 2vw; 
+    text-decoration: none;
+}
+
+.web_nav_menu_list li a.active {
+    color: black; 
+    font-weight: bold;
+}
+
+.web_nav_menu_list li a:hover {
+    color: black;
+    font-weight: bold;
+    transition: .5s; 
+}
