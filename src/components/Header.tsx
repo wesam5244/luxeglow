@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link as ScrollLink, Element } from 'react-scroll';
 import styles from './Header.module.css';
 import logo from './../images/luxeglow_logo-transparent.png';
 import { NavLink, Link } from 'react-router-dom';
@@ -57,6 +58,11 @@ const Header: React.FC<HeaderProps> = (props) => {
                             </NavLink>
                         </li>
                         <li>
+                            <ScrollLink to='about-us' smooth={true} duration={500}>
+                                About Us
+                            </ScrollLink>
+                        </li>
+                        <li>
                             <NavLink className={({ isActive }) => isActive ? styles.active : undefined} to='/contact'>
                                 Contact Us
                             </NavLink>
@@ -81,7 +87,12 @@ const Header: React.FC<HeaderProps> = (props) => {
                         </div>
                         <a href="/">Home</a>
                         <hr style={{ height: '1px', backgroundColor: 'white', border: 'none' }} />
-
+                        <li>
+                            <ScrollLink to='about-us' smooth={true} duration={500}>
+                                About Us
+                            </ScrollLink>
+                        </li>
+                        <hr style={{ height: '1px', backgroundColor: 'white', border: 'none' }} />
                         <a href="/contact-us">Contact Us</a>
                         <hr style={{ height: '1px', backgroundColor: 'white', border: 'none' }} />
                         <div className={styles.hamburger_call}>
