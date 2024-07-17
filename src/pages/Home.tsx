@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './Home.css'
-
-import Header from '../components/Header';
-import HomeTop from '../components/Home/HomeTop';
+import styles from './Home.module.css'; 
 import AboutUs from '../components/Home/AboutUs';
 import ServiceDisplay from '../components/General/ServiceDisplay';
-import Footer from '../components/General/Footer';
-import { getServices } from './../helpers/ServicesHelper'
-
+import Reviews from '../components/Home/Reviews';
+import { useFetchServices } from './../helpers/ServicesHelper';
 
 
 const Home: React.FC = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
+    const [isFetching, fetchedData] = useFetchServices(); 
     // Function to update screen width and height on resize
     const updateScreenSize = () => {
         setScreenWidth(window.innerWidth);
@@ -27,26 +24,21 @@ const Home: React.FC = () => {
             window.removeEventListener('resize', updateScreenSize);
         };
     }, []); // Empty dependency array ensures this effect runs only once on component mount
-
-    const services = getServices();
     
     return (
         <>
             <AboutUs screenWidth={screenWidth} />
-            <h1 style = {{
-                textAlign: 'center',
-                color: 'white',
-                marginBottom: '2%'
-            }}>
+            <h1 className={styles.pricing_header}>
                 OUR PRICING
             </h1>
-            <div className='services-display' style = {{marginBottom: '5%'}}>
-                {services.map((service) => {
+            <div className={styles.services_display}>
+                {!isFetching && fetchedData.map((service) => {
                     return (
                         <ServiceDisplay screenWidth={screenWidth} service={service} />
                     )
                 })}
             </div>
+            <Reviews screenWidth={screenWidth} />
         </>
     )
 }

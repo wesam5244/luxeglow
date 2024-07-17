@@ -1,8 +1,15 @@
-.services-display {
+.pricing_header{
+    text-align: center;
+    color: white;
+    margin-bottom: 2%; 
+}
+
+.services_display {
     width: 100%; 
     display: flex;
     flex-direction: row;
     align-items: stretch; /* Ensures all items stretch to the same height */
     justify-content: center;
     flex-wrap: wrap; 
+    margin-bottom: 5%; 
 }

@@ -1,4 +1,4 @@
-.about-us-div {
+.about_us_div {
     width: 100%;
     margin-top: 0;
     display: flex;
@@ -10,7 +10,7 @@
     display: flex;
 }
 
-.about-us-content{
+.about_us_content{
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(0, 0, 0, 0.75);
@@ -20,7 +20,7 @@
     padding: 10px;
 }
 
-.about-us-header {
+.about_us_header {
     font-family: 'Gruppo', sans-serif;
     font-size: 2em;
     font-weight: 600;
@@ -28,7 +28,14 @@
     color: white; 
 }
 
-.about-us-motto {
+.about_us_underline{
+    width: 25%;
+    height: 1%;
+    background-color: white;
+    border: none; 
+}
+
+.about_us_motto {
     font-family: 'Gruppo', sans-serif;
     font-size: 1.5em;
     font-weight: 600;
@@ -39,7 +46,7 @@
     color: white; 
 }
 
-.about-us-text {
+.about_us_text {
     text-align: center;
     width: 80%;
     font-style: normal;

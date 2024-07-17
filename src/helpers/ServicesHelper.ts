@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from 'react'; 
 export { };
 
 type Price = {
@@ -95,4 +96,23 @@ export const getServices = () => {
         services.push(new_service);
     }
     return services; 
+}
+
+export function useFetchServices(): [boolean, Service[]]{
+    const [isFetching, setIsFetching] = useState(false); 
+    const [fetchedData, setFetchedData] = useState<Service[]>([]); 
+	useEffect(() => {
+		async function fetchData(){
+			setIsFetching(true); 
+			try{
+				const data = getServices(); 
+				setFetchedData(data); 
+                setIsFetching(false); 
+			} catch(err){
+			}
+		}
+		fetchData(); 
+	}, []); 
+	
+	return [isFetching, fetchedData]
 }
