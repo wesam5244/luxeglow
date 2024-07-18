@@ -1,0 +1,65 @@
+.footer{
+    width: 100%; 
+    margin-top: 0; 
+    display: flex; 
+    padding-bottom: 20px; 
+    background-image: linear-gradient(rgba(77, 84, 88, 0.5), rgba(77, 84, 88, 0.5)), url('./../../../images/footer_img.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.footer_col{
+    flex: 1; 
+    text-align: center;
+}
+
+.footer_logo{
+    width: 70%; 
+    margin-left: 0;  
+}
+
+.footer_header{
+    font-family: 'Gruppo', sans-serif;
+}
+
+.service_text{
+    font-family: 'Homenaje', sans-serif;
+    cursor: pointer; 
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: normal;
+    opacity: 0.6; 
+}
+
+.service_text:hover{
+    transition: .5s; 
+    color: white;
+    opacity: 1; 
+}
+
+.right_col_icon{
+    font-size: 1.5em; 
+    color: #9ecded;
+}
+
+.square_button{
+    width: 2.5em;
+    height: 2.5em; 
+    text-align: center;
+    background-color: #9ecded;
+    border: none; 
+    border-radius: 3px;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.square_button:hover{
+    opacity: 0.5;
+    transition: 0.3s; 
+}
+
+.icon{
+    font-size: 1.5em; 
+    color: black;
+}

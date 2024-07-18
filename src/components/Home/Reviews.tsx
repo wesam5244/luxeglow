@@ -5,15 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight, faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons';
 
-const reviews = [
-    { author_name: 'alawi', relative_time_description: 'a month ago', rating: 5, text: "THE BEST! I'm a used car dealer and need my cars cleaned frequently. So happy I found these guys. The service is unmatched. The meticulous attention to detail is a marvel. They even fixed the scratches and restored the headlights. I thought I'd have to get a new paint job but it came out flawless. It's so convenient getting so many services all done at the same time. No appointment, I dropped my car off in the morning and it was ready next day, dropped off another and picked up the one they completed. They made a 5 year old car look like it just came off the assembly line. Their quality of work, professionalism and timeliness is impeccable. They earned themselves a lifelong customer." },
-    { author_name: 'Hassan', relative_time_description: '2 months ago', rating: 5, text: "I am absolutely thrilled with the service I received at LuxeGlow! From the moment I arrived, the team made me feel welcome and reassured me that my car was in good hands. The detailing job they did exceeded my expectations – my car looks better than the day I bought it! The attention to detail and professionalism of the staff truly sets this place apart. I will definitely be a returning customer and highly recommend to anyone in need of top-quality service." },
-    { author_name: 'Abe Aljahmi', relative_time_description: '2 months ago', rating: 5, text: "I recently had my car detailed at LuxeGlow Auto Spa and couldn't be more satisfied with the results. The team was professional, thorough, and attentive to every detail, making my car look and feel brand new. The interior was meticulously cleaned, with every nook and cranny addressed, while the exterior gleamed with a flawless shine. The staff was friendly and knowledgeable, offering excellent customer service throughout the process. With reasonable prices and top-notch quality, they have earned my highest recommendation for anyone seeking exceptional car detailing services." },
-    { author_name: 'Ayan Ahmed Hussain', relative_time_description: '3 months ago', rating: 5, text: "WOW! Just picked up my Truck after a full car detailing and I'm speechless. These guys work magic!\nThe interior looks and smells like new, and the exterior shines like never before. The team was super friendly, and you can tell they love what they do.\nMy ride feels brand new! If you want your car to sparkle and shine, this is the place to go.\n5 stars all the way!" },
-    { author_name: 'Obay Alakel', relative_time_description: '2 months ago', rating: 5, text: "Very good and satisfying service. Took them less than a hour to transform my car from garbage to brand new 🚗🚙." },
-    { author_name: 'Hisham Ahmad', relative_time_description: '2 months ago', rating: 5, text: "Took my car to multiple places in this city however this had to be best service I’ve ever gotten. Not only the service itself but also the way the team treats their customers. Their service is worth every cent. Definitely going to be coming back often." },
-]
-
 interface Review{
     name: string, 
     pic: string, 
@@ -63,7 +54,7 @@ const Reviews: React.FC<ReviewsProps> = (props) => {
     }
 
     function nextSlide() {
-        setCurrentIndex((prev) => (((prev + 1) * numReviews) >= reviews.length) ? 0 : prev + 1)
+        setCurrentIndex((prev) => (((prev + 1) * numReviews) >= props.reviews.length) ? 0 : prev + 1)
     }
     function prevSlide() {
         setCurrentIndex((prev) => prev - 1)

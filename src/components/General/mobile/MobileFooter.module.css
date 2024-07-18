@@ -1,17 +1,31 @@
-.mobile-footer{
+.mobile_footer{
     display: flex; 
     flex-direction: column;
     justify-content: flex-start;
     background-color: #5e7b8e;
 }
 
-.footer-logo-pic{
-    width: 50%; 
-    margin: 0 auto; 
-    
+.footer_logo_container{
+    width: 100%; 
+    text-align: center;
+    margin: 0;
 }
 
-.mobile-footer-header{
+
+.footer_logo_pic{
+    width: 50%; 
+    margin: 0 auto; 
+}
+
+.footer_description{
+    text-align: center;
+    margin: 0; 
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.2em;
+}
+
+.mobile_footer_header{
     font-family: 'Gruppo', sans-serif;
     text-align: left;
     margin: 0; 
@@ -20,12 +34,7 @@
     font-weight: 600;
 }
 
-.mobile-footer-icon{
-    font-size: 1.5em; 
-    color: #9ecded;
-}
-
-.mobile-footer-link{
+.mobile_footer_link{
     margin: 0; 
     margin-top: 5%; 
     margin-left: 10%;
@@ -35,4 +44,11 @@
     font-size: 1.2em;
     font-weight: 300;
     font-style: normal;
+    text-decoration: none;
+    color: white;   
+}
+
+.right_col_icon{
+    font-size: 1.5em; 
+    color: #9ecded;
 }

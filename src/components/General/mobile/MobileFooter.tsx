@@ -1,62 +1,61 @@
 import logo from './../../../images/luxeglow_logo-transparent.png';
-import './MobileFooter.css'
+import styles from './MobileFooter.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons"
+import { Link as ScrollLink, Element } from 'react-scroll';
 
 function MobileFooter() {
     return (
-        <div className='mobile-footer'>
-            <a href="/" style={{ margin: '0' }}>
-                <img className="footer-logo-pic" src={logo} alt="Logo" />
+        <div className={styles.mobile_footer}>
+            <a href="/" className={styles.footer_logo_container}>
+                <img className={styles.footer_logo_pic} src={logo} alt="Logo" />
             </a>
-            <p style={{ textAlign: 'center', margin: '0', marginLeft: '5%', marginRight: '5%', fontSize: '1.2em' }}>
+            <p className={styles.footer_description}>
                 Ignite Brilliance, Embrace Elegance - LuxeGlow Auto Spa, where we specialize in transforming rides, one detail at a time.
             </p>
-            <h2 className="mobile-footer-header">
+            <h2 className={styles.mobile_footer_header}>
                 Hours of Operation
             </h2>
-            <p className="mobile-footer-link">
+
+            <p className={styles.mobile_footer_link}>
                 MON-THUR, SAT & SUN: 9 am - 6 pm
             </p>
-            <h2 className="mobile-footer-header">
+            <h2 className={styles.mobile_footer_header}>
                 Quick Links
             </h2>
-            <p className="mobile-footer-link">
+            <ScrollLink to='about-us' className={styles.mobile_footer_link} smooth={true} duration={500}>
                 About Us
-            </p>
-            <p className="mobile-footer-link">
-                Our Services
-            </p>
-            <p className="mobile-footer-link">
+            </ScrollLink>
+            <ScrollLink to='prices' className={styles.mobile_footer_link} smooth={true} duration={500}>
                 Pricing
-            </p>
-            <p className="mobile-footer-link">
+            </ScrollLink>
+            <p className={styles.mobile_footer_link}>
                 Contact Us
             </p>
-            <h2 className="mobile-footer-header">
+            <h2 className={styles.mobile_footer_header}>
                 Get In Touch
             </h2>
             <div style={{ display: 'inline-flex', alignItems: 'center', margin: '0', marginLeft: '10%' }}>
-                <FontAwesomeIcon icon={faPhone} className='right-col-icon' />
+                <FontAwesomeIcon icon={faPhone} className={styles.right_col_icon}/>
                 <p style={{ marginLeft: '5%' }}>
                     (519) 816-7258
                 </p>
             </div>
             <div style={{ display: 'inline-flex', alignItems: 'center', margin: '0', marginLeft: '10%' }}>
-                <FontAwesomeIcon icon={faEnvelope} className='right-col-icon' />
+                <FontAwesomeIcon icon={faEnvelope} className={styles.right_col_icon} />
                 <p style={{ marginLeft: '5%' }}>
                     luxeglowautospa@gmail.com
                 </p>
             </div>
             <div style={{ display: 'inline-flex', alignItems: 'center', margin: '0', marginBottom: '0', marginLeft: '10%' }}>
-                <FontAwesomeIcon icon={faInstagram} className='right-col-icon' />
+                <FontAwesomeIcon icon={faInstagram} className={styles.right_col_icon} />
                 <p style={{ marginLeft: '5%', textAlign: 'left' }}>
                     @luxeglowautospa
                 </p>
             </div>
             <div style={{ display: 'inline-flex', alignItems: 'center', margin: '0', marginBottom: '0', marginLeft: '10%' }}>
-                <FontAwesomeIcon icon={faLocationDot} className='right-col-icon' />
+                <FontAwesomeIcon icon={faLocationDot} className={styles.right_col_icon} />
                 <p style={{ marginLeft: '5%', textAlign: 'left' }}>
                     1035 Crawford Ave, Windsor, ON N9A 5E1
                 </p>
