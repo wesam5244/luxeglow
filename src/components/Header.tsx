@@ -63,6 +63,11 @@ const Header: React.FC<HeaderProps> = (props) => {
                             </ScrollLink>
                         </li>
                         <li>
+                            <ScrollLink to='prices' smooth={true} duration={500}>
+                                Pricing
+                            </ScrollLink>
+                        </li>
+                        <li>
                             <NavLink className={({ isActive }) => isActive ? styles.active : undefined} to='/contact'>
                                 Contact Us
                             </NavLink>
@@ -89,6 +94,12 @@ const Header: React.FC<HeaderProps> = (props) => {
                         <hr style={{ height: '1px', backgroundColor: 'white', border: 'none' }} />
                         <li>
                             <ScrollLink to='about-us' smooth={true} duration={500}>
+                                About Us
+                            </ScrollLink>
+                        </li>
+                        <hr style={{ height: '1px', backgroundColor: 'white', border: 'none' }} />
+                        <li>
+                            <ScrollLink to='prices' smooth={true} duration={500}>
                                 About Us
                             </ScrollLink>
                         </li>

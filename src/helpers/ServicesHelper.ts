@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'; 
+import axios from 'axios';
 export { };
 
 type Price = {
@@ -16,14 +17,12 @@ export class Service {
     prices: Price[]; 
     services_included: string[]
     addons: Addon[]
-    image: string; 
 
-    constructor(name: string, services_included: string[] = [],  addons: Addon[] = [], image: string = "", prices: Price[] = []) {
+    constructor(name: string, services_included: string[] = [],  addons: Addon[] = [], prices: Price[] = []) {
         this.name = name;
         this.prices = prices; 
         this.services_included = services_included;
         this.addons = addons; 
-        this.image = image; 
     }
 
     addPrice(priceObj: Price){
@@ -89,7 +88,7 @@ const services_list = [
 export const getServices = () => {
     var services = []
     for (var service of services_list){
-        const new_service = new Service(service["name"], service["includes"], service["addons"], service["image"]);
+        const new_service = new Service(service["name"], service["includes"], service["addons"]);
         for (var price of service["prices"]){
             new_service.addPrice(price)
         }
@@ -97,15 +96,46 @@ export const getServices = () => {
     }
     return services; 
 }
+const SERVICES_API_URL = 'http://127.0.0.1:8000/api/services/';
+const REVIEWS_API_URL = 'http://127.0.0.1:8000/api/reviews/';
 
-export function useFetchServices(): [boolean, Service[]]{
+export const getServicesAPI = async () => {
+  try {
+    const response = await axios.get(SERVICES_API_URL);
+    var services = [];
+    for (var service of response.data){
+        const new_service = new Service(service["name"], service["includes"].replaceAll('\r', '').split('\n'), service["addons"]);
+        for (var price of service["prices"]){
+            new_service.addPrice(price)
+        }
+        services.push(new_service);
+    }
+    return services;
+  } catch (error) {
+    console.error('Axios error:', error);
+    return [];
+  }
+};
+
+export const getReviews = async () => {
+    try {
+      const response = await axios.get(REVIEWS_API_URL);
+      console.log(response.data);
+      return response.data['reviews']; 
+    } catch (error) {
+      console.error('Axios error:', error);
+      return [];
+    }
+  };
+
+export function useFetch<T>(fetchFn: () => Promise<T>): [boolean, T | null]{
     const [isFetching, setIsFetching] = useState(false); 
-    const [fetchedData, setFetchedData] = useState<Service[]>([]); 
+    const [fetchedData, setFetchedData] = useState<T | null>(null); 
 	useEffect(() => {
 		async function fetchData(){
 			setIsFetching(true); 
 			try{
-				const data = getServices(); 
+				const data = await fetchFn(); 
 				setFetchedData(data); 
                 setIsFetching(false); 
 			} catch(err){

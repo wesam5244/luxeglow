@@ -8,7 +8,16 @@ interface ServiceDisplayProps {
 }
 
 const ServiceDisplay: React.FC<ServiceDisplayProps> = (props) => {
-    const imagePath = "/images/" + props.service.image;
+    //const imagePath = "/images/" + props.service.image;
+    /*
+    <img 
+                src={imagePath} 
+                style={{ 
+                    width: '100%', 
+                    height: props.screenWidth > 700 ? (props.screenWidth < 1200 ? '22vh' : '30vh' ) : '30vh' 
+                }} 
+            />
+    */
     return (
         <div className={styles.service_div} style={{
             maxWidth: props.screenWidth > 700 ? '30%' : '90%',
@@ -19,13 +28,7 @@ const ServiceDisplay: React.FC<ServiceDisplayProps> = (props) => {
                 {props.service.name}
             </h2>
             
-            <img 
-                src={imagePath} 
-                style={{ 
-                    width: '100%', 
-                    height: props.screenWidth > 700 ? (props.screenWidth < 1200 ? '22vh' : '30vh' ) : '30vh' 
-                }} 
-            />
+            
             <div className={styles.prices}>
                 {props.service.prices.map((price, index) => {
                     return (

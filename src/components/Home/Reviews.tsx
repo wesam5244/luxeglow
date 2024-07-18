@@ -14,9 +14,17 @@ const reviews = [
     { author_name: 'Hisham Ahmad', relative_time_description: '2 months ago', rating: 5, text: "Took my car to multiple places in this city however this had to be best service I’ve ever gotten. Not only the service itself but also the way the team treats their customers. Their service is worth every cent. Definitely going to be coming back often." },
 ]
 
+interface Review{
+    name: string, 
+    pic: string, 
+    rating: number, 
+    text: string, 
+    relative_time_description: string
+}
 
 interface ReviewsProps {
-    screenWidth: number
+    screenWidth: number, 
+    reviews: Review[]
 }
 
 const Reviews: React.FC<ReviewsProps> = (props) => {
@@ -29,7 +37,6 @@ const Reviews: React.FC<ReviewsProps> = (props) => {
             slider.style.transform = `translateX(-${(currentIndex) * 100}%)`;
         }
     }, [currentIndex])
-
     var reviewDivWidth = '20%'; 
     var marginLeft = '4%';
     var extraMarginLeft = '8%';
@@ -64,8 +71,7 @@ const Reviews: React.FC<ReviewsProps> = (props) => {
     const prevButtonClassName = `fa-layers fa-fw ${styles.prev_button}`;
     const nextButtonClassName = `fa-layers fa-fw ${styles.next_button}`;
 
-    
-
+    console.log(props.reviews); 
     return (
         <div className={styles.reviews_container}>
             <h1 className={styles.reviews_header}>
@@ -83,7 +89,8 @@ const Reviews: React.FC<ReviewsProps> = (props) => {
                 </div>
                 <div className={styles.reviews_slider} ref={reviewSliderRef}>
                     {
-                        reviews.map((review, index) => {
+                        props.reviews?.map((review, index) => {
+                            console.log(review); 
                             return (
                                 <div className={styles.review_div} style={{
                                     marginLeft: ((index % numReviews == 0) && index > 0) ? extraMarginLeft : marginLeft,
@@ -91,10 +98,10 @@ const Reviews: React.FC<ReviewsProps> = (props) => {
                                     maxWidth: reviewDivWidth,
                                 }}>
                                     <div className={styles.review_top}>
-                                        <img src={user} className={styles.user_pic} />
+                                        <img src={review.pic} className={styles.user_pic} />
                                         <div className={styles.review_info}>
                                             <p className={styles.review_user}>
-                                                {review.author_name}
+                                                {review.name}
                                             </p>
                                             <p className={styles.review_time}>
                                                 {review.relative_time_description}
